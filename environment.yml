@@ -1,0 +1,36 @@
+name: tfgpu
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - keras
+  - keras-applications
+  - keras-base
+  - keras-preprocessing
+  - matplotlib
+  - matplotlib-base
+  - mkl
+  - mkl-service
+  - mkl_fft
+  - mkl_random
+  - numpy
+  - numpy-base
+  - openssl
+  - pandas
+  - pillow
+  - pip
+  - protobuf
+  - scikit-learn
+  - scipy
+  - sparqlwrapper
+  - tensorboard
+  - tensorboard-plugin-wit
+  - tensorflow=2.3.0
+  - tensorflow-base
+  - tensorflow-estimator
+  - tensorflow-gpu
+  - wheel
+  - pip:
+    - sparql-client
+
