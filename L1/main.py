@@ -18,7 +18,7 @@ pred_mat = np.zeros_like(test_data_matrix)
 
 # 这里需要自行设计，怎么更好计算相似度，思考一下这里可以改进的问题
 eps = np.finfo(float).eps
-for i in range(n_users):
+for i in df_train.uid.unique():
     ln = base_data_matrix[i]
     tn = test_data_matrix[i]
     # Jaccard相似度，分母加上eps，避免除以0
