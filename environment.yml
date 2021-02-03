@@ -26,7 +26,7 @@ dependencies:
   - sparqlwrapper
   - tensorboard
   - tensorboard-plugin-wit
-  - tensorflow=2.3.0
+  - tensorflow
   - tensorflow-base
   - tensorflow-estimator
   - tensorflow-gpu
