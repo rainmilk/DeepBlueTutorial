@@ -1,3 +1,4 @@
+#%%
 from keras.layers import Input, Embedding, dot, Lambda
 from keras.models import Model
 from keras.regularizers import l2
@@ -25,6 +26,7 @@ df_train.assign(mid=[i_id2idx[iid] for iid in df_train.mid])
 df_test.assign(uid=[u_id2idx[uid] for uid in df_test.uid])
 df_test.assign(mid=[i_id2idx[iid] for iid in df_test.mid])
 
+#%%
 # 构造MF模型
 reg = l2(1e-5)
 nb_latent_factor = 100
@@ -46,11 +48,13 @@ pred_rating = dot([u_lf, i_lf], axes=-1)
 
 mf = Model(inputs=[user_idx, item_idx], outputs=pred_rating, name='mf_model')
 mf.compile(optimizer='adam', loss='mse', metrics=['mse'])
+mf.summary()
 
-
+#%%
 # 模型训练
 mf.fit(x=[df_train.uid.values, df_train.mid.values], y=df_train.rating.values, epochs=3, batch_size=64)
 
+#%%
 # 模型预测
 p_ratings = mf.predict(x=[df_test.uid.values, df_test.mid.values])
 
