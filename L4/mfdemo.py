@@ -21,10 +21,10 @@ u_id2idx = dict(zip(user_ids, range(nb_user)))
 i_id2idx = dict(zip(item_ids, range(nb_item)))
 
 # 替换ID为Index
-df_train.assign(uid=[u_id2idx[uid] for uid in df_train.uid])
-df_train.assign(mid=[i_id2idx[iid] for iid in df_train.mid])
-df_test.assign(uid=[u_id2idx[uid] for uid in df_test.uid])
-df_test.assign(mid=[i_id2idx[iid] for iid in df_test.mid])
+df_train = df_train .assign(uid=[u_id2idx[uid] for uid in df_train.uid])
+df_train = df_train.assign(mid=[i_id2idx[iid] for iid in df_train.mid])
+df_test = df_test.assign(uid=[u_id2idx[uid] for uid in df_test.uid])
+df_test = df_test.assign(mid=[i_id2idx[iid] for iid in df_test.mid])
 
 #%%
 # 构造MF模型
