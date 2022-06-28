@@ -1,4 +1,4 @@
-# 深蓝学院《推荐系统入门与提高》课程代码演示
+# 《推荐系统入门与提高》课程代码演示
 
 打开 [Binder](https://mybinder.org/v2/gh/rainmilk/DeepBlueTutorial/master):
 <a href="https://mybinder.org/v2/gh/rainmilk/DeepBlueTutorial/master"><img src="https://matthiasbussonnier.com/posts/img/binder_logo_128x128.png" width="90" /></a>
